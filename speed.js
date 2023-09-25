@@ -19,4 +19,12 @@ function Sdetector(Ispeed){
     return message;
 }
 
-console.log(Sdetector('135'));
+const userInput=document.getElementById("input");
+const checkResult=document.getElementById("check");
+const Result=document.getElementById("result");
+checkResult.addEventListener('click',function(){
+    const speed=userInput.value;
+   const message=Sdetector(speed);
+    Result.textContent =message;
+})
+//console.log(Sdetector('135'));

@@ -31,4 +31,15 @@ function gradeGen(Inputmarks){
   
 return `your grade is: ${grade}` ;
 }
+
+const userInput=document.getElementById("input");
+const checkResult=document.getElementById("check");
+const Result=document.getElementById("result");
+checkResult.addEventListener('click',()=>{
+    let input= userInput.value ;
+    let message=gradeGen(input);
+    Result.textContent=message;
+
+
+})
 console.log(gradeGen())

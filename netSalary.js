@@ -84,3 +84,19 @@ console.log(details["nhifDeductions"])
 console.log(details.netPay)
 console.log(details.paye)
 console.log(details.groossSalary)
+
+const input1=document.getElementById('input-basic')
+const input2=document.getElementById('input-benefits')
+const button=document.getElementById('check')
+const result=document.getElementById('result')
+const result2=document.getElementById('result2')
+const result3=document.getElementById('result3')
+button.addEventListener('click',function(){
+    const Bsalary=parseInt(input1.value);
+    const Benefits=parseInt(input2.value) ;
+
+let message=Netsalary(Bsalary,Benefits);
+result.textContent=message.netPay;
+result2.textContent=message.paye;
+result3.textContent=message.groossSalary;
+})
